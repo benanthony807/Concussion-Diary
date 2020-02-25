@@ -15,7 +15,7 @@ import com.example.contactdiary.R;
 public class Question12Screen extends AppCompatActivity {
 
     private Entry entry;
-    private boolean answer;
+    private Object answer;
 
 
     @Override
@@ -33,14 +33,14 @@ public class Question12Screen extends AppCompatActivity {
         answerYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                answer = true;
+                answer = "Yes";
             }
         });
         RadioButton answerNo = findViewById(R.id.no);
         answerNo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                answer = false;
+                answer = "No";
             }
         });
 
@@ -59,9 +59,11 @@ public class Question12Screen extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                entry.setCurrentAnswer(answer);
-                Intent intent = new Intent(getApplicationContext(), Question13Screen.class);
-                startActivity(intent);
+                if (answer != null) {
+                    entry.setCurrentAnswer(answer);
+                    Intent intent = new Intent(getApplicationContext(), Question13Screen.class);
+                    startActivity(intent);
+                }
             }
         });
     }

@@ -39,6 +39,7 @@ public class EntryCompleteScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 myDb.insertData(entry.getTitle(), entry.getBody());
+                entry.reset();
                 Intent intent = new Intent(getApplicationContext(), MainActivity.class);
                 startActivity(intent);
             }

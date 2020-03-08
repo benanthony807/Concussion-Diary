@@ -9,7 +9,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.contactdiary.Entry;
 import com.example.contactdiary.R;
-import com.example.contactdiary.ui.entryscreens.questionscreens.Question1Screen;
+import com.example.contactdiary.ui.entryscreens.questionscreens.IntQuestionScreen;
 
 
 public class SelectActivityTypeScreen extends AppCompatActivity {
@@ -28,7 +28,7 @@ public class SelectActivityTypeScreen extends AppCompatActivity {
         typePractice.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(), Question1Screen.class);
+                Intent i = new Intent(getApplicationContext(), IntQuestionScreen.class);
                 entry.type = "Practice";
                 startActivity(i);
             }
@@ -39,7 +39,7 @@ public class SelectActivityTypeScreen extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 entry.type = "Game";
-                Intent i = new Intent(getApplicationContext(), Question1Screen.class);
+                Intent i = new Intent(getApplicationContext(), IntQuestionScreen.class);
                 startActivity(i);
             }
         });

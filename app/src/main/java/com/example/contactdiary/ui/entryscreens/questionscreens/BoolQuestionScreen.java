@@ -12,11 +12,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.contactdiary.Entry;
 import com.example.contactdiary.R;
 
-public class Question7Screen extends AppCompatActivity {
+public class BoolQuestionScreen extends AppCompatActivity {
 
     private Entry entry;
     private Object answer;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +27,7 @@ public class Question7Screen extends AppCompatActivity {
 
         TextView question = findViewById(R.id.question);
         question.setText(entry.getCurrentQuestion());
+
 
         RadioButton answerYes = findViewById(R.id.yes);
         answerYes.setOnClickListener(new View.OnClickListener() {
@@ -44,14 +44,13 @@ public class Question7Screen extends AppCompatActivity {
             }
         });
 
-
         Button back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                entry.reduceCurrent();
-                Intent intent = new Intent(getApplicationContext(), Question6Screen.class);
+                Intent intent = new Intent(getApplicationContext(), entry.getPrevScreen());
                 startActivity(intent);
+                entry.reduceCurrent();
             }
         });
 
@@ -61,7 +60,8 @@ public class Question7Screen extends AppCompatActivity {
             public void onClick(View v) {
                 if (answer != null) {
                     entry.setCurrentAnswer(answer);
-                    Intent intent = new Intent(getApplicationContext(), Question8Screen.class);
+                    Intent intent = new Intent(getApplicationContext(), entry.getNextScreen());
+                    entry.increaseCurrent();
                     startActivity(intent);
                 }
             }

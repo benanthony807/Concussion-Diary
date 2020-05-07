@@ -67,7 +67,7 @@ public class Entry extends Application {
 
 
     public String getTitle() {
-        return type + " on " + date.toString();
+        return type + "\n" + date.toString();
     }
 
     public String getBody() {
@@ -85,7 +85,8 @@ public class Entry extends Application {
                 "11. Ears ringing at any point? " + questions.get(10).getAnswer() + "\n" +
                 "12. Nervous, anxious, irritable, or sad? " + questions.get(11).getAnswer() + "\n" +
                 "13. Slurring speech? " + questions.get(12).getAnswer() + "\n" +
-                "14. Word to remember: " + wordToRemember + "    |   Your answer: " + questions.get(13).getAnswer() + "\n" +
+                "14. Word to remember: " + wordToRemember + "\n" +
+                "       Your answer: " + questions.get(13).getAnswer() + "\n" +
                 "15. Your notes: " + questions.get(14).getAnswer() + "\n";
     }
 

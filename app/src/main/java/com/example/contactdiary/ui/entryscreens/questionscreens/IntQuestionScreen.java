@@ -21,7 +21,7 @@ public class IntQuestionScreen extends AppCompatActivity {
         setContentView(R.layout.activity_int_question_screen);
 
 
-        entry = ((Entry)getApplicationContext());
+        entry = ((Entry) getApplicationContext());
 
 
         TextView question = findViewById(R.id.question);
@@ -44,12 +44,16 @@ public class IntQuestionScreen extends AppCompatActivity {
         next.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (!answerBox.getText().toString().equals("")) {
-                    int answer = Integer.parseInt(answerBox.getText().toString());
-                    entry.setCurrentAnswer(answer);
-                    Intent intent = new Intent(getApplicationContext(), entry.getNextScreen());
-                    entry.increaseCurrent();
-                    startActivity(intent);
+                try {
+                    if (!answerBox.getText().toString().equals("")) {
+                        int answer = Integer.parseInt(answerBox.getText().toString());
+                        entry.setCurrentAnswer(answer);
+                        Intent intent = new Intent(getApplicationContext(), entry.getNextScreen());
+                        entry.increaseCurrent();
+                        startActivity(intent);
+                    }
+                } catch (NumberFormatException e) {
+                    // do nothing
                 }
             }
         });

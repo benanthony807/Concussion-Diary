@@ -1,31 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.contactdiary">
+    package="com.ben.contactdiary">
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.example.contactdiary.Entry"
+        android:name="com.ben.contactdiary.Entry"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.example.contactdiary.ui.entryscreens.EntryCompleteScreen"></activity>
-        <activity android:name="com.example.contactdiary.ui.entryscreens.SelectActivityTypeScreen" />
-        <activity android:name="com.example.contactdiary.ui.entryscreens.RememberWordScreen" />
+        <activity android:name="com.ben.contactdiary.ui.entryscreens.EntryCompleteScreen"></activity>
+        <activity android:name="com.ben.contactdiary.ui.entryscreens.SelectActivityTypeScreen" />
+        <activity android:name="com.ben.contactdiary.ui.entryscreens.RememberWordScreen" />
 
-        <activity android:name="com.example.contactdiary.ui.entryscreens.questionscreens.StringQuestionScreen" />
-        <activity android:name="com.example.contactdiary.ui.entryscreens.questionscreens.IntQuestionScreen" />
-        <activity android:name="com.example.contactdiary.ui.entryscreens.questionscreens.BoolQuestionScreen" />
+        <activity android:name="com.ben.contactdiary.ui.entryscreens.questionscreens.StringQuestionScreen" />
+        <activity android:name="com.ben.contactdiary.ui.entryscreens.questionscreens.IntQuestionScreen" />
+        <activity android:name="com.ben.contactdiary.ui.entryscreens.questionscreens.BoolQuestionScreen" />
 
-        <activity android:name="com.example.contactdiary.ViewMyRecords"
-            android:parentActivityName="com.example.contactdiary.MainActivity"/>
-        <activity android:name="com.example.contactdiary.ViewRecord" />
+        <activity android:name="com.ben.contactdiary.ViewMyRecords"
+            android:parentActivityName="com.ben.contactdiary.MainActivity"/>
+        <activity android:name="com.ben.contactdiary.ViewRecord" />
 
 
-        <activity android:name="com.example.contactdiary.ui.entryscreens.NewEntryMainScreen" />
-        <activity android:name="com.example.contactdiary.MainActivity">
+        <activity android:name="com.ben.contactdiary.ui.entryscreens.NewEntryMainScreen" />
+        <activity android:name="com.ben.contactdiary.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
